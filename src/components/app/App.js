@@ -3,6 +3,7 @@ import YouTube from 'react-youtube';
 
 import logo from '../../logo.svg';
 import './App.css';
+import BranchSelection from '../branch-selection/BranchSelection'
 
 class App extends Component {
   render() {
@@ -20,9 +21,23 @@ class App extends Component {
               start: 17,
               showinfo: 0,
               controls: 0,
+              rel: 0,
             }
           }}
           onEnd={() => {alert("All Done!")}}
+        />
+        <BranchSelection
+          onBranch={(videoId)=> alert(videoId)}
+          branches={[
+            {
+              videoId: 'JGwWNGJdvx8',
+              imageURI: '/temp_porg.jpg'
+            },
+            {
+              videoId: '62RvnXZgHwQ',
+              imageURI: '/temp_porg.jpg'
+            },
+          ]}
         />
       </div>
     );
