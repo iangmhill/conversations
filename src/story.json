@@ -1,0 +1,48 @@
+{
+    "start": {
+        "id": "Danay",
+        "type": "video"
+    },
+    "videos": [
+        {
+            "id": "Danay",
+            "videoId": "GqLhLDbm0d8",
+            "videoOpts": {
+                "startTimeInSeconds": 17
+            },
+            "subsequent": {
+                "id": "Ed/Cosmo",
+                "type": "branch",
+                "waitInSeconds": 0
+            }
+        },
+        {
+            "id": "Ed",
+            "videoId": "JGwWNGJdvx8"
+        },
+        {
+            "id": "Cosmo",
+            "videoId": "62RvnXZgHwQ"
+        }
+    ],
+    "branches": [
+        {
+            "id": "Ed/Cosmo",
+            "branches": [
+                {
+                    "id": "Ed",
+                    "imageURI": "/temp_ed.jpg"
+                },
+                {
+                    "id": "Cosmo",
+                    "imageURI": "/temp_pelican.jpg"
+                }
+            ],
+            "subsequent": {
+                "id": "Ed",
+                "type": "video",
+                "waitInSeconds": 10
+            }
+        }
+    ]
+}

@@ -1,3 +1,5 @@
+// TODO: Timeout/transition to default
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
@@ -15,7 +17,7 @@ class BranchSelection extends Component {
       return (
         <li className="BranchSelection-branch-li" key={index}>
           <button 
-            onClick={() => onBranch(branch.videoId)}
+            onClick={() => onBranch(branch.id)}
             className="BranchSelection-branch-button"
           >
             <img
@@ -41,7 +43,7 @@ class BranchSelection extends Component {
 BranchSelection.propTypes = {
   branches: PropTypes.arrayOf(
     PropTypes.shape({
-      videoId: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
       imageURI: PropTypes.string.isRequired,
     })
   ).isRequired,
